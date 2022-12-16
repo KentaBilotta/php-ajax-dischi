@@ -15,13 +15,18 @@
 </head>
 <body>
     <div class="container">
-        <div class="card">
-            <img src="" alt="">
-            <h3>Titolo</h3>
-            <p>author</p>
-            <p>year</p>
-        </div>
-
+            <?php 
+                foreach ($dischi as $disco) {
+                    ?> 
+                    <div class="card">
+                        <img class="image" src="<?= $disco["poster"] ?>" alt="">
+                        <h3><?= $disco["title"] ?></h3>
+                        <p><?= $disco["author"] ?></p>
+                        <p><?= $disco["year"] ?></p>
+                    </div>
+                    <?php
+                } 
+            ?>
     </div>
     
 </body>
